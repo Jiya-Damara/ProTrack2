@@ -63,6 +63,18 @@
         </aside>
 
         <main>
+            <form class="add-product-popUp">
+                <h1>Add Activity</h1><br>
+                <label>
+                    <h2>Title</h2>
+                    <input required id="title" type="text">
+                </label>
+                <label>
+                    <h2>Duration</h2>
+                    <input required id="duration" type="text">
+                </label>
+                <button type="submit" class="popupSubmit">Add</button>
+            </form>
             <h1>Dashboard</h1>
 
             <div class="date">
@@ -228,7 +240,8 @@
             <!-- Activity Analytics Section  -->
             <div class="activity-analysis">
                 <h2>Activity Analytics</h2>
-                <div class="activity-cont">
+                <div class="activity-cont" id="activity-cont">
+                    
                     <div class="item online">
                         <div class="icon">
                             <span class="material-icons-sharp">auto_stories</span>
@@ -242,6 +255,7 @@
                             <h3>3 hours</h3>
                         </div>
                     </div>
+
                     <div class="item offline">
                         <div class="icon">
                             <span class="material-icons-sharp">book</span>
@@ -255,30 +269,20 @@
                             <h3>2 hours</h3>
                         </div>
                     </div>
-                    <div class="item offline">
-                        <div class="icon">
-                            <span class="material-icons-sharp">book</span>
-                        </div>
-                        <div class="right">
-                            <div class="info">
-                                <h3>SELF STUDY</h3>
-                                <small class="text-muted">Last 24 Hours</small>
-                            </div>
-                            <h5 class="success">+20%</h5>
-                            <h3>2 hours</h3>
-                        </div>
-                    </div>
+
                 </div>
                 <div class="item add-product">
-                    <div>
+                    <div class="div">
                         <span class="material-icons-sharp">add</span>
                         <h3>Add Activity</h3>
                     </div>
                 </div>
             </div>
+            
+        </div>
 
-            <!-- Script -->
-            <script src="./contents/js/dashboard.js"></script>
+        <!-- Script -->
+        <script src="./contents/js/dashboard.js"></script>
 </body>
 
 </html>

@@ -894,14 +894,59 @@ main .add-event-footer .add-event-btn:hover {
     align-items: center;
 }
 
-.right .activity-analysis .add-product div {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
+.right .activity-analysis .add-product .div {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
-.right .activity-analysis .add-product div h3 {
-    font-weight: 600;
+.right .activity-analysis .add-product .div h3 {
+  font-weight: 600;
+}
+.right .add-product:hover{
+  background-color: #8970d63e;
+}
+
+.add-product-popUp{
+  display: none;
+}
+.add-product-popUp label{
+  display: flex;
+  justify-content: space-between;
+  
+}
+.add-product-popUp input{
+  border: 1px solid #8970d6;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+.add-product-popUp .popupSubmit{
+  background-color: #8a70d6;
+  color: white;
+  width: fit-content;
+  align-self: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.add-product-popUp .popupSubmit:hover{
+  background-color: #9b87d5;
+}
+.add-product-popUp.active{
+  position: absolute;
+  z-index: 1222;
+  top: 30%;
+  left: 30%;
+  background-color: #f7f6fc;
+  min-width: 30%;
+  display: flex;
+  justify-content: center;
+  box-shadow: 1px 1px 10px #6363633d;
+  border-radius: 25px;
+  flex-direction: column;
+  gap: 10px;
+  padding:50px 50px 30px;
+  
 }
 
 /* === media queries === */

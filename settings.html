@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Dashboard | ProTrack</title>
+    <link rel="icon" type="image/x-icon" href="./contents/images/favicon.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="contents/css/setting.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Logo -->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <h2>Pro<span class="primary">Track</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="./dashboard.html">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <!-- <a href="./activityTracking.html">
+                    <span class="material-icons-sharp">calendar_today</span>
+                    <h3>Activity Tracking</h3>
+                </a> -->
+                <a href="./goalSetting.html">
+                    <span class="material-icons-sharp">flag</span>
+                    <h3>Goal Setting</h3>
+                </a>
+                <a href="./analytics.html">
+                    <span class="material-icons-sharp">insights</span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="./todo.html">
+                    <span class="material-icons-sharp">checklist</span>
+                    <h3>Todo</h3>
+                </a>
+                <a href="./reports.html">
+                    <span class="material-icons-sharp">bar_chart</span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="./settings.html" class="active">
+                    <span class="material-icons-sharp">settings</span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#" onclick="logout()">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+        <main class="setting">
+            <h2 style="font-weight: 800; font-size: 2.1rem; margin-bottom: 1rem;">Settings</h2>
+            
+            <div class="proBanner">
+                <h2>Upgrade to Pro</h2>
+                <p>Unlock advanced features and boost your productivity!</p>
+                <button class="btn btn-upgrade">Learn More</button>
+            </div>
+
+            <div class="page-header">
+                <div class="page-title">
+                    <h4>Profile Settings</h4>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="form-group">
+                                <label>Username</label>
+                                <input type="text" placeholder="User123">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" placeholder="User">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" placeholder="Singh">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="text" placeholder="user123@example.com">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input type="text" placeholder="98756XXXXX" size="10">
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <a href="javascript:void(0);" class="btn btn-submit me-2">Save</a>
+                            <a href="javascript:void(0);" class="btn btn-cancel">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Improved Authentication Settings Section -->
+            <div class="page-header">
+                <div class="page-title">
+                    <h4>Authentication Settings</h4>
+                    <h6>Manage Your Account Security</h6>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5>Change Password</h5>
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="form-group">
+                                <label>Current Password</label>
+                                <input type="password" placeholder="Enter current password">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="form-group">
+                                <label>New Password</label>
+                                <input type="password" placeholder="Enter new password">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="form-group">
+                                <label>Confirm New Password</label>
+                                <input type="password" placeholder="Confirm new password">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <a href="javascript:void(0);" class="btn btn-submit me-2">Change Password</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <h5>Two-Factor Authentication</h5>
+                    <div class="row">
+                        <div class="col-12">
+                            <p>Enhance your account security by enabling two-factor authentication.</p>
+                            <a href="javascript:void(0);" class="btn btn-submit me-2">Enable 2FA</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <h5>Login History</h5>
+                    <div class="row">
+                        <div class="col-12">
+                            <p>Review your recent login activity.</p>
+                            <a href="javascript:void(0);" class="btn btn-submit me-2">View Login History</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Improved Subscription Section -->
+            <div class="page-header">
+                <div class="page-title">
+                    <h4>Pro Settings</h4>
+                    <h6>Manage Your ProTrack Subscription</h6>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="plan-comparison">
+                        <div class="plan free-plan">
+                            <h5>Current Plan: Free</h5>
+                            <ul>
+                                <li>Basic activity tracking</li>
+                                <li>Limited goal setting</li>
+                                <li>Basic analytics</li>
+                            </ul>
+                        </div>
+                        <div class="plan pro-plan">
+                            <h5>Pro Plan Features:</h5>
+                            <ul>
+                                <li>Advanced activity tracking</li>
+                                <li>Unlimited goal setting</li>
+                                <li>Comprehensive analytics and reports</li>
+                                <li>Ad-free experience</li>
+                                <li>Priority support</li>
+                            </ul>
+                            <a href="./billing-getaway.html"><button class="btn btn-subscribe">Subscribe Now</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Improved Privacy Section -->
+<div class="page-header">
+    <div class="page-title">
+        <h4>Privacy Settings</h4>
+        <h6>Manage Your Data and Privacy Preferences</h6>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <h5>Data Collection and Usage</h5>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="usageData">
+                    <label class="form-check-label" for="usageData">
+                        Allow ProTrack to collect usage data to improve services
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="personalization">
+                    <label class="form-check-label" for="personalization">
+                        Allow personalized recommendations based on my activity
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h5>Privacy Policy</h5>
+        <div class="row">
+            <div class="col-12">
+                <p>Our privacy policy outlines how we collect, use, and protect your personal information.
+                </p>
+                <a href="privacy-policy.html" target="_blank" class="btn btn-submit me-2">View Privacy
+                    Policy</a>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>
+
+<!-- Data Export Section -->
+<div class="card">
+    <div class="card-header">
+        <h5>Data Export</h5>
+        <p class="text-muted">Download a copy of your personal data</p>
+    </div>
+    <div class="card-body">
+        <div class="export-info">
+            <p>Your export will include:</p>
+            <ul>
+                <li>&#8226; Profile information</li>
+                <li>&#8226; Account settings</li>
+                <li>&#8226; Activity history</li>
+                <li>&#8226; Saved preferences</li>
+            </ul>
+        </div>
+        
+        <div class="export-actions">
+            <button class="btn btn-primary">
+                <i class="fas fa-download"></i>
+                Request Data Export
+            </button>
+            <p class="text-small mt-2">Processing may take up to 48 hours. You'll receive an email when your data is ready.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Data Deletion Section -->
+<div class="card mt-4">
+    <div class="card-header">
+        <h5>Data Deletion</h5>
+        <p class="text-muted">Permanently remove your account and data</p>
+    </div>
+    <div class="card-body">
+        <div class="deletion-warning">
+            <div class="alert alert-danger">
+                <i class="fas fa-exclamation-triangle"></i>
+                <strong>Warning:</strong> This action cannot be undone. All your data will be permanently deleted.
+            </div>
+        </div>
+        <div class="deletion-info">
+            <p>Before proceeding, please note:</p>
+            <ul>
+                <li>&#8226; All personal information will be erased</li>
+                <li>&#8226; Your account will be permanently deactivated</li>
+                <li>&#8226; You'll lose access to all services and features</li>
+                <li>&#8226; Active subscriptions will be cancelled</li>
+            </ul>
+        </div>
+        
+        
+        <div class="deletion-confirmation">
+            <div class="form-check mb-3">
+                <input type="checkbox" class="form-check-input" id="confirmDeletion">
+                <label class="form-check-label" for="confirmDeletion">
+                    I understand that this action is permanent and cannot be reversed
+                </label>
+            </div>
+            <button class="btn btn-danger" disabled>
+                <i class="fas fa-trash-alt"></i>
+                Delete My Account
+            </button>
+        </div>
+    </div>
+</div>
+
+        </main>
+        
+        <div class="popup-container">
+            <div class="popup">
+                <button class="close-popup">&times;</button>
+                <h2>Upgrade to Pro</h2>
+                <div class="plan-comparison">
+                    <div class="plan free-plan">
+                        <h5>Free Plan</h5>
+                        <ul>
+                            <li>Basic activity tracking</li>
+                            <li>Limited goal setting</li>
+                            <li>Basic analytics</li>
+                        </ul>
+                    </div>
+                    <div class="plan pro-plan">
+                        <h5>Pro Plan</h5>
+                        <ul>
+                            <li>Advanced activity tracking</li>
+                            <li>Unlimited goal setting</li>
+                            <li>Comprehensive analytics and reports</li>
+                            <li>Ad-free experience</li>
+                            <li>Priority support</li>
+                        </ul>
+                        <a href="./billing-getaway.html"><button class="btn btn-subscribe">Subscribe Now</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Script -->
+    <script src="./contents/js/dashboard.js"></script>
+    <script src="./contents/js/settings.js"></script>
+</body>
+
+</html>

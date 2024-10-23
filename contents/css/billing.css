@@ -1,0 +1,549 @@
+/* Reset and base styles */
+:root {
+    --color-primary: #0972d3;
+    --color-primary-hover: #0459af;
+    --color-background: #f2f3f3;
+    --color-text: #16191f;
+    --color-text-secondary: #5f6b7a;
+    --color-border: #d1d5db;
+    --color-success: #037f0c;
+    --color-error: #d91515;
+    --color-warning: #f19c02;
+    --radius-small: 4px;
+    --radius-medium: 8px;
+    --shadow-card: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.5;
+}
+
+.container {
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.billing {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+    background: white;
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-card);
+    padding: 2rem;
+}
+
+/* Header Styles */
+.billing h1 {
+    color: var(--color-text);
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.billing-subtitle {
+    text-align: center;
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+}
+
+/* Billing Content Grid */
+.billing-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* Order Details Section */
+.plan-details {
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+    padding: 1.5rem;
+}
+
+.plan-details h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+}
+
+.order-details-table {
+    width: 100%;
+}
+
+.order-details-table th,
+.order-details-table td {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.order-details-table th {
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    width: 40%;
+}
+
+.order-details-table td {
+    text-align: right;
+}
+
+.order-details-table .order-total {
+    font-weight: 600;
+    color: var(--color-text);
+    border-top: 2px solid var(--color-border);
+}
+
+/* Plan Selection Section */
+.payment-plans {
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+    padding: 1.5rem;
+}
+
+.plan-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.plan-option {
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-small);
+    padding: 1.25rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.plan-option.active {
+    border-color: var(--color-primary);
+    background-color: rgba(9, 114, 211, 0.05);
+}
+
+.plan-option.active::after {
+    content: "✓";
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.plan-option:hover {
+    border-color: var(--color-primary);
+}
+
+.plan-option h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 0.25rem;
+}
+
+.savings {
+    color: var(--color-success);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Payment Form Section */
+.payment-form {
+    grid-column: span 2;
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+    padding: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-small);
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(9, 114, 211, 0.2);
+}
+
+.btn-pay {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0.875rem 1.5rem;
+    border-radius: var(--radius-small);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-pay:hover {
+    background-color: var(--color-primary-hover);
+}
+
+/* Security Badge */
+.security-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.security-badge svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .billing-content {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-form {
+        grid-column: span 1;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .billing {
+        padding: 1.5rem;
+    }
+}
+
+/* Loading State */
+.btn-pay.loading {
+    position: relative;
+    color: transparent;
+}
+
+.btn-pay.loading::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.card-icon-container {
+    position: absolute;
+    right: 12px;
+    top: 38px; /* Positioned below the label */
+    display: flex;
+    gap: 8px;
+    pointer-events: none; 
+}
+.card-icon-container i {
+    font-size: 20px;
+    color: var(--color-text-secondary);
+    opacity: 0.7;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+/* Add this to your existing CSS */
+
+.fas, .fab {
+    margin-right: 0.5rem;
+}
+
+.card-icon-container {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.card-icon-container i {
+    font-size: 1.5rem;
+    color: var(--color-text-secondary);
+}
+
+.form-group {
+    position: relative;
+}
+
+.btn-pay i {
+    margin-right: 0.5rem;
+}
+
+/* Update the security badge styles */
+.security-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    margin-top: 1rem;
+}
+
+.security-badge i {
+    font-size: 1rem;
+    color: var(--color-success);
+}
+
+/* Add styles for invalid input */
+input:invalid {
+    border-color: var(--color-error);
+}
+
+input:invalid:focus {
+    box-shadow: 0 0 0 2px rgba(217, 21, 21, 0.2);
+}
+
+/* Add these new styles */
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.card-icons {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 5px;
+    pointer-events: none;
+}
+
+.card-icons img {
+    width: 30px;
+    height: 20px;
+    opacity: 0.6;
+}
+
+/* Update input padding */
+#card-number {
+    padding-right: 130px;
+}
+
+/* Update the plan options styling */
+.plan-option {
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-small);
+    padding: 1.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.plan-option.active {
+    border-color: var(--color-primary);
+    background-color: rgba(9, 114, 211, 0.05);
+    position: relative;
+}
+
+.plan-option.active::after {
+    content: "✓";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    z-index: 1001;
+    animation: slideIn 0.3s ease-out;
+}
+
+.modal-content {
+    padding: 2rem;
+}
+
+.success-icon {
+    width: 64px;
+    height: 64px;
+    background-color: #037f0c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.success-icon i {
+    color: white;
+    font-size: 32px;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #16191f;
+}
+
+.modal-subtitle {
+    text-align: center;
+    color: #5f6b7a;
+    margin-bottom: 2rem;
+}
+
+.receipt {
+    background-color: #f2f3f3;
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.receipt-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    color: #5f6b7a;
+}
+
+.receipt-row.total {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #d1d5db;
+    font-weight: 600;
+    color: #16191f;
+}
+
+.btn-home {
+    background-color: #0972d3;
+    color: white;
+    border: none;
+    padding: 0.875rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.btn-home:hover {
+    background-color: #0459af;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translate(-50%, -60%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modal-content {
+        padding: 1.5rem;
+    }
+    
+    .success-icon {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .success-icon i {
+        font-size: 24px;
+    }
+}

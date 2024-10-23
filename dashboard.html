@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Dashboard | ProTrack</title>
+    <link rel="icon" type="image/x-icon" href="./contents/images/favicon.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="contents/css/dashboard.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Logo -->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <h2>Pro<span class="primary">Track</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="./dashboard.html" class="active">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <!-- <a href="./activityTracking.html">
+                    <span class="material-icons-sharp">calendar_today</span>
+                    <h3>Activity Tracking</h3>
+                </a> -->
+                <a href="./goalSetting.html">
+                    <span class="material-icons-sharp">flag</span>
+                    <h3>Goal Setting</h3>
+                </a>
+                <a href="./analytics.html">
+                    <span class="material-icons-sharp">insights</span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="./todo.html">
+                    <span class="material-icons-sharp">checklist</span>
+                    <h3>Todo</h3>
+                </a>
+                <a href="./reports.html">
+                    <span class="material-icons-sharp">bar_chart</span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="./settings.html">
+                    <span class="material-icons-sharp">settings</span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#" onclick="logout()">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+        <main>
+            <form class="add-product-popUp">
+                <h1>Add Activity</h1><br>
+                <label>
+                    <h2>Title</h2>
+                    <input required id="title" type="text">
+                </label>
+                <label>
+                    <h2>Duration</h2>
+                    <input required id="duration" type="text">
+                </label>
+                <button type="submit" class="popupSubmit">Add</button>
+            </form>
+            <h1>Dashboard</h1>
+
+            <div class="date">
+                <input type="date">
+            </div>
+
+            <!-- Insights Section -->
+            <div class="insights">
+                <div class="section-parts">
+                    <div>
+                        <span class="material-icons-sharp">school</span>
+                    </div>
+                    <div class="middle">
+                        <div class="lef">
+                            <h2>College Lectures</h2>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>81%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">18 Lectures</small>
+                </div>
+
+                <div class="expenses">
+                    <div>
+                        <span class="material-icons-sharp">library_books</span>
+                    </div>
+                    <div class="middle">
+                        <div class="lef">
+                            <h2>Self Study</h2>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>62%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">10 Skills</small>
+                </div>
+
+                <div class="income">
+                    <div>
+                        <span class="material-icons-sharp">emoji_events</span>
+                    </div>
+                    <div class="middle">
+                        <div class="lef">
+                            <h2>Extra-curricular</h2>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>44%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">8 Activities</small>
+                </div>
+            </div>
+
+            <!-- My Courses Section -->
+            <div class="my-courses">
+                <h2>My Courses</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course Name</th>
+                            <th>Start</th>
+                            <th>Rate</th>
+                            <th>Level</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Web Design</td>
+                            <td>Jul 30</td>
+                            <td>4.9</td>
+                            <td class="primary">Intermediate</td>
+                            <td class="warning">Pending</td>
+                        </tr>
+                        <tr>
+                            <td>OOPS</td>
+                            <td>Aug 15</td>
+                            <td>4.8</td>
+                            <td class="primary">Intermediate</td>
+                            <td class="warning">Pending</td>
+                        </tr>
+                        <tr>
+                            <td>DBMS</td>
+                            <td>Sep 3</td>
+                            <td>4.4</td>
+                            <td class="primary">Elementary</td>
+                            <td class="warning">Pending</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#">Show All</a>
+            </div>
+
+        </main>
+
+        <!-- Top Right Menu Section -->
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <!-- Placeholder for the user's name -->
+                        <p>Hey, <b id="username-placeholder">USER</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <!-- Placeholder for the user's profile image -->
+                        <img src="./contents/images/user.png" alt="profile" id="profile-photo-placeholder">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Recent Updates Section -->
+            <div class="recent-updates">
+                <h2>Recent Updates</h2>
+                <div class="updates">
+                    <div class="update">
+                        <div class="profile-photo">
+                            <!-- Placeholder for the user's profile image -->
+                            <img src="./contents/images/user.png" alt="profile" id="profile-photo-placeholder">
+                        </div>
+                        <div class="message">
+                            <p><b id="username-placeholder">USER</b> completed the Web Design course.</p>
+                            <small class="text-muted">5 Minutes Ago</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <!-- Placeholder for the user's profile image -->
+                            <img src="./contents/images/user.png" alt="profile" id="profile-photo-placeholder">
+                        </div>
+                        <div class="message">
+                            <p><b id="username-placeholder">USER</b> achieved a goal: "Study 2 hours daily."</p>
+                            <small class="text-muted">10 Minutes Ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity Analytics Section  -->
+            <div class="activity-analysis">
+                <h2>Activity Analytics</h2>
+                <div class="activity-cont" id="activity-cont">
+                    
+                    <div class="item online">
+                        <div class="icon">
+                            <span class="material-icons-sharp">auto_stories</span>
+                        </div>
+                        <div class="right">
+                            <div class="info">
+                                <h3>ONLINE LECTURES</h3>
+                                <small class="text-muted">Last 24 Hours</small>
+                            </div>
+                            <h5 class="success">+35%</h5>
+                            <h3>3 hours</h3>
+                        </div>
+                    </div>
+
+                    <div class="item offline">
+                        <div class="icon">
+                            <span class="material-icons-sharp">book</span>
+                        </div>
+                        <div class="right">
+                            <div class="info">
+                                <h3>SELF STUDY</h3>
+                                <small class="text-muted">Last 24 Hours</small>
+                            </div>
+                            <h5 class="success">+20%</h5>
+                            <h3>2 hours</h3>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="item add-product">
+                    <div class="div">
+                        <span class="material-icons-sharp">add</span>
+                        <h3>Add Activity</h3>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Script -->
+        <script src="./contents/js/dashboard.js"></script>
+</body>
+
+</html>

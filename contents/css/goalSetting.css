@@ -1036,6 +1036,7 @@ main {
 
     .right {
         margin-top: 0;
+        overflow: visible;
     }
 
     .right .top {

@@ -617,6 +617,7 @@ main .timeline-content p {
 
     main {
         margin-top: 8rem;
+        overflow: visible;
     }
     main .timeline-items::before{
         left: 7px;
@@ -635,6 +636,7 @@ main .timeline-content p {
     
     .right {
         margin-top: 0;
+        overflow: visible;
     }
 
     .right .top {
@@ -679,3 +681,106 @@ main .timeline-content p {
         left: 0;
     }
 }
+
+/* === Timeline Animations === */
+main .timeline-item {
+    margin-bottom: 40px;
+    width: 100%;
+    padding-left: 30px;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideIn 0.6s ease forwards;
+}
+
+main .timeline-item:nth-child(even) {
+    transform: translateX(100px);
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+main .timeline-dot {
+    height: 16px;
+    width: 16px;
+    background-color: var(--color-primary);
+    position: absolute;
+    left: -7px;
+    border-radius: 50%;
+    top: 10px;
+    transform: scale(0);
+    animation: popIn 0.4s ease forwards 0.6s;
+}
+
+@keyframes popIn {
+    50% {
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+main .timeline-content {
+    background-color: var(--color-white);
+    padding: 20px;
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeIn 0.5s ease forwards 0.4s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+main .timeline-items::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: var(--color-primary);
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    animation: lineGrow 0.7s ease forwards;
+}
+
+@keyframes lineGrow {
+    to {
+        transform: scaleY(1);
+    }
+}
+
+/* Preserve responsive design */
+@media screen and (max-width: 768px) {
+    main .timeline-items::before {
+        left: 7px;
+    }
+    main .timeline-item:nth-child(odd) {
+        padding-right: 0;
+        text-align: left;
+    }
+    main .timeline-item:nth-child(odd),
+    main .timeline-item:nth-child(even) {
+        padding-right: 37px;
+    }
+    main .timeline-dot {
+        left: 0;
+    }
+}
+
+/* Add stagger effect for multiple items */
+main .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+main .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+main .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+main .timeline-item:nth-child(4) { animation-delay: 0.4s; }
+main .timeline-item:nth-child(5) { animation-delay: 0.5s; }

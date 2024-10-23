@@ -10,9 +10,13 @@
     <link rel="icon" type="image/x-icon" href="./contents/images/favicon.png" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="contents/css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="contents/css/reports.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
+
+
     <div class="container">
 
         <!-- Logo -->
@@ -36,7 +40,7 @@
                     <h3>Activity Tracking</h3>
                 </a> -->
                 <a href="./goalSetting.html">
-                    <span class="material-icons-sharp">flag</span>
+                    <span class="material-icons-sharp">receipt_long</span>
                     <h3>Goal Setting</h3>
                 </a>
                 <a href="./analytics.html">
@@ -44,11 +48,11 @@
                     <h3>Analytics</h3>
                 </a>
                 <a href="./todo.html">
-                    <span class="material-icons-sharp">checklist</span>
+                    <span class="material-icons-sharp">inventory</span>
                     <h3>Todo</h3>
                 </a>
                 <a href="./reports.html" class="active">
-                    <span class="material-icons-sharp">bar_chart</span>
+                    <span class="material-icons-sharp">report_gmailerrorred</span>
                     <h3>Reports</h3>
                 </a>
                 <a href="./settings.html">
@@ -62,6 +66,7 @@
             </div>
         </aside>
 
+        <!-- Only keep Focus Time and Goals Progress stat cards -->
         <main>
             <form class="add-product-popUp">
                 <h1>Add Activity</h1><br>
@@ -75,11 +80,76 @@
                 </label>
                 <button type="submit" class="popupSubmit">Add</button>
             </form>
-            <h1>Reports</h1>
-          
+            <section id="dashboard">
+                <h1>Reports</h1>
 
+                <!-- Charts Section -->
+                <div class="card-container">
+                    <!-- Performance Score Card -->
+                    <div class="card">
+                        <h3>Performance Score</h3>
+                        <div class="chart-container">
+                            <canvas id="performanceChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Task Completion Card -->
+                    <div class="card">
+                        <h3>Task Completion Rate</h3>
+                        <div class="chart-container">
+                            <canvas id="taskChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Time Distribution Chart moved to its own row -->
+                <div class="time-distribution-container">
+                    <div class="card">
+                        <h3>Time Distribution</h3>
+                        <div class="chart-container">
+                            <canvas id="timeChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Grid with only 2 cards -->
+                <div class="stats-grid">
+                    <!-- Focus Time -->
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="icon">
+                                <span class="material-icons-sharp">timer</span>
+                            </div>
+                            <span class="stat-label">Focus Time</span>
+                        </div>
+                        <div class="stat-value">5.2h</div>
+                        <div class="stat-change positive-change">
+                            <span>
+                                <span class="material-icons-sharp">arrow_upward</span>
+                                15% increase
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Goals Progress -->
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="icon">
+                                <span class="material-icons-sharp">flag</span>
+                            </div>
+                            <span class="stat-label">Goals Progress</span>
+                        </div>
+                        <div class="stat-value">78%</div>
+                        <div class="stat-change negative-change">
+                            <span>
+                                <span class="material-icons-sharp">arrow_downward</span>
+                                3% decrease
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
-
         <!-- Top Right Menu Section -->
         <div class="right">
             <div class="top">
@@ -172,11 +242,15 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
 
         <!-- Script -->
-        <script src="./contents/js/dashboard.js"></script>
+        <script src="contents/js/dashboard.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="/contents/js/charts.js"></script>
+
+
 </body>
 
 </html>

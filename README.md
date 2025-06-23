@@ -6,10 +6,6 @@
   ### **Track. Achieve. Succeed.**
   
   *A modern Learning Management System designed to help students excel in their academic journey*
-  
-  [![GitHub stars](https://img.shields.io/github/stars/yourusername/protrack?style=social)](https://github.com/yourusername/protrack)
-  [![License](https://img.shields.io/badge/license-Academic-blue.svg)](LICENSE)
-  [![Status](https://img.shields.io/badge/status-Active-success.svg)]()
 </div>
 
 ---
@@ -45,7 +41,6 @@ ProTrack is a comprehensive web-based Learning Management System that empowers s
 ### 📊 **Academic Tools**
 - 📚 Activity tracking & logging
 - 🎯 SMART goal management
-- 📈 Progress visualization
 - ✅ Integrated task manager
 
 </td>
@@ -55,8 +50,7 @@ ProTrack is a comprehensive web-based Learning Management System that empowers s
 
 ### 🧠 **Analytics & Insights**
 - 📊 Real-time dashboard
-- 📈 Performance graphs
-- 📋 Detailed reports
+- 📋 Detailed analytics
 - 🎯 Goal progress tracking
 
 </td>
@@ -78,12 +72,12 @@ ProTrack is a comprehensive web-based Learning Management System that empowers s
 
 <div align="center">
 
-| **Frontend** | **Data & Storage** | **Visualization** | **Tools** |
+| **Frontend** | **Data & Storage** | **Tools** |
 |:------------:|:------------------:|:-----------------:|:---------:|
-| HTML5 | JSON | Chart.js | VS Code |
-| CSS3 | Local Storage | Interactive Graphs | Git |
-| JavaScript | Session Management | Progress Bars | Chrome DevTools |
-| Responsive Design | Data Persistence | Analytics Dashboard | NPM |
+| HTML5 | JSON | VS Code |
+| CSS3 | Local Storage | Git |
+| JavaScript | Session Management | Chrome DevTools |
+| Responsive Design | Data Persistence | NPM |
 
 </div>
 
@@ -168,8 +162,6 @@ npm start
 
 - Timestamp-based activity logging
 - Category-wise activity classification
-- Progress calculation algorithms
-- Data aggregation and statistics
 </details>
 
 <details>
@@ -178,14 +170,12 @@ npm start
 - SMART goal validation
 - Progress tracking algorithms
 - Milestone achievement detection
-- Visual progress indicators
 </details>
 
 <details>
 <summary><strong>📈 Analytics Engine</strong></summary>
 
 - Real-time data processing
-- Chart.js integration for visualizations
 - Trend analysis and predictions
 - Performance insights generation
 </details>
@@ -252,7 +242,6 @@ We welcome contributions from the community! Here's how you can help:
 - [x] Core LMS functionality
 - [x] Responsive design implementation
 - [x] Basic analytics dashboard
-- [ ] Advanced reporting features
 - [ ] Mobile app development
 - [ ] AI-powered study recommendations
 - [ ] Integration with external platforms
@@ -284,20 +273,6 @@ We extend our heartfelt gratitude to:
 
 ---
 
-## 📞 Support & Contact
-
-<div align="center">
-
-### Need Help?
-
-📧 **Email**: [your-email@example.com](mailto:your-email@example.com)  
-🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/protrack/issues)  
-💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/protrack/discussions)  
-📖 **Documentation**: [Wiki](https://github.com/yourusername/protrack/wiki)
-
-</div>
-
----
 
 <div align="center">
 

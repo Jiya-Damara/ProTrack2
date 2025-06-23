@@ -41,6 +41,7 @@ ProTrack is a comprehensive web-based Learning Management System that empowers s
 ### 📊 **Academic Tools**
 - 📚 Activity tracking & logging
 - 🎯 SMART goal management
+- 📈 Progress visualization
 - ✅ Integrated task manager
 
 </td>
@@ -50,7 +51,8 @@ ProTrack is a comprehensive web-based Learning Management System that empowers s
 
 ### 🧠 **Analytics & Insights**
 - 📊 Real-time dashboard
-- 📋 Detailed analytics
+- 📈 Performance graphs
+- 📋 Detailed reports
 - 🎯 Goal progress tracking
 
 </td>
@@ -73,7 +75,7 @@ ProTrack is a comprehensive web-based Learning Management System that empowers s
 <div align="center">
 
 | **Frontend** | **Data & Storage** | **Tools** |
-|:------------:|:------------------:|:-----------------:|:---------:|
+|:------------:|:------------------:|:---------:|
 | HTML5 | JSON | VS Code |
 | CSS3 | Local Storage | Git |
 | JavaScript | Session Management | Chrome DevTools |
@@ -162,14 +164,15 @@ npm start
 
 - Timestamp-based activity logging
 - Category-wise activity classification
+- Data aggregation and statistics
 </details>
 
 <details>
 <summary><strong>🎯 Goal Management System</strong></summary>
 
 - SMART goal validation
-- Progress tracking algorithms
 - Milestone achievement detection
+- Visual progress indicators
 </details>
 
 <details>
@@ -242,6 +245,7 @@ We welcome contributions from the community! Here's how you can help:
 - [x] Core LMS functionality
 - [x] Responsive design implementation
 - [x] Basic analytics dashboard
+- [ ] Advanced reporting features
 - [ ] Mobile app development
 - [ ] AI-powered study recommendations
 - [ ] Integration with external platforms
@@ -272,7 +276,6 @@ We extend our heartfelt gratitude to:
 - 🌟 **Open source community** for the tools and libraries used
 
 ---
-
 
 <div align="center">
 
